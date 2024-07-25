@@ -552,7 +552,7 @@ footer {
 }
 
 /* Media Queries*/
-
+/* xl */
 @media (max-width: 1280px) {
     
     .bottom-menu button {
@@ -580,6 +580,7 @@ footer {
         }
     }
 }
+/* lg */
 @media (max-width: 1024px) {
     
     .top-menu > div {
@@ -637,6 +638,7 @@ footer {
         padding-top: 1rem;
     }
 }
+/* md */
 @media (max-width: 768px) {
     
     .top-menu > div {
@@ -665,7 +667,11 @@ footer {
             font-size: 14px;
         }
     }
+    .footer-middle p {
+        line-height: 1rem;
+    }
 }
+/* sm */
 @media (max-width: 640px) {
     
     .top-menu {
@@ -701,6 +707,7 @@ footer {
         }
     }
 }
+/* xs */
 @media (max-width: 476px) {
     
     .top-menu {
