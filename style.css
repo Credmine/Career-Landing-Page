@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: 'Poppins';
 }
@@ -58,7 +59,7 @@ p {
     box-shadow: 5px 20px 10px 10px rgba(0, 0, 0, 0.999);
 }
 
-/* Sections */
+/* Section styles */
 header {
     width: 100%;
     min-height: 9rem;
@@ -66,6 +67,8 @@ header {
     flex-direction: column;
     position: fixed;
     background-color: #ffffff;
+    animation: slide-down 1.5s;
+    z-index: 1;
 }
 .top-menu {
     width: 90%;
@@ -101,6 +104,7 @@ header {
     height: 4.375rem;
     margin-left: auto;
     margin-right: auto;
+    padding-inline: 1rem;
     background-color: #1E22AA;
     justify-content: space-evenly;
     align-items: center;
@@ -124,12 +128,13 @@ header {
         border-radius: 1.375rem;
         border-color: transparent;
         background-color: #4B4EBB;
+        margin-inline: 1rem;
     }
     .topbar-search-icon {
         width: 1.5rem;
         height: 1.5rem;
-        position:fixed;
-        right: 23rem;
+        margin-left: -4rem;
+        margin-right: 5rem;
     }
     ::placeholder {
         color: #ffffff;
@@ -181,21 +186,29 @@ header {
 .hero-banner {
     min-width: 77.5rem;
     min-height: 32.3rem;
-    padding-top: 20rem;
+    padding-top: 18rem;
     border-radius: 1.25rem;
     margin-top: 9.5rem;
     display: inline-block;
-    background: linear-gradient(to bottom, transparent, #1E22AA), url(images/heroBanner.png);
-    background-blend-mode: overlay;
+    background: linear-gradient(to bottom, #1E22AA00 50%, #1e23aa8a 95%), url(images/heroBanner.png);
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
+    text-shadow: 1px 1px 10px #000000;
+    animation: fade 1s;
 
     h1 {
         font-weight: 600;
         font-size: 3.125rem;
         margin-bottom: 1rem;
+        animation: zoom-out 1s;
     }
     p {
         color: #ffffff;
+        animation: zoom-out 0.5s;
+    }
+    button {
+        animation: zoom-out 0.5s;
     }
 }
 .about {
@@ -257,6 +270,7 @@ header {
     h3 {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+        font-weight: 700;
     }
 }
 .team {
@@ -368,6 +382,7 @@ header {
         border: 1px solid #185BAA;
         min-height: 2.75rem;
         padding: .5rem;
+        
     }
 }
 .follow {
@@ -531,5 +546,126 @@ footer {
     p {
         margin: 0;
         padding: 0;
+    }
+}
+
+/* Media Queries*/
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 1px solid red;
+}
+
+@media (max-width: 1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (max-width: 640px) {
+    .container {
+        max-width: 475px;
+    }
+}
+@media (max-width: 475px) {
+    .container {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    .top-menu, .bottom-menu {
+        display: none;
+    }
+    .middle-menu {
+        .topbar-abenson-logo {
+            width: 5.75rem;
+            height: auto;
+        }
+        input {
+            width: 30rem;
+        }
+        .login-btn {
+            display: none;
+        }
+        button {
+            padding: 0;
+        }
+        .topbar-search-icon{
+            display: none;
+        }
+    }
+    button {
+        font-size: 14px;
+    }
+    .hero-banner {
+        min-width: 10.5rem;
+        padding-top: 19rem;
+        padding-inline: 0.5rem;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .about-cards {
+        flex-direction: column;
+    }
+}
+
+
+/* Animations */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(1.8rem) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0rem) scale(1);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes zoom-out {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slide-down {
+    0% {
+        transform: translateY(-3.8rem) scale(1);
+    }
+    100% {
+        transform: translateY(0rem) scale(1);
     }
 }
