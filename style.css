@@ -1,4 +1,5 @@
 /* Global styles */
+
 body {
     font-family: 'Poppins';
 }
@@ -60,6 +61,7 @@ p {
 }
 
 /* Section styles */
+
 header {
     width: 100%;
     min-height: 9rem;
@@ -550,80 +552,206 @@ footer {
 }
 
 /* Media Queries*/
-.container {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid red;
-}
 
-@media (max-width: 1536px) {
-    .container {
-        max-width: 1280px;
-    }
-}
 @media (max-width: 1280px) {
-    .container {
-        max-width: 1024px;
+    
+    .bottom-menu button {
+        font-size: 14px;
+    }
+    .about-cards > div {
+        width: 20rem;
+        height: 20rem;
+    }
+    .about-cards {
+        > .about-mission {
+            gap: 10rem;
+        }
+        > .about-vision {
+            gap: 14rem;
+        }
+        > .about-values {
+            gap: 12rem;
+        }
+    } 
+    .team-cards {
+        > div {
+            height: 300px;
+            background-position: center;
+        }
     }
 }
 @media (max-width: 1024px) {
-    .container {
-        max-width: 768px;
+    
+    .top-menu > div {
+        width: 30%;
+    }
+    .hero-banner {
+        min-width: 60rem;
+    }
+    .bottom-menu > button {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .about-cards {
+        > .about-mission {
+            gap: 10rem;
+        }
+        > .about-vision {
+            gap: 15.5rem;
+        }
+        > .about-values {
+            gap: 14rem;
+        }
+    } 
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .footer-socials {
+        align-content: center;
+        justify-content: center;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+    .footer-right {
+        width: 100%;
+    }
+    .footer-middle {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-bottom {
+        padding-top: 1rem;
     }
 }
 @media (max-width: 768px) {
-    .container {
-        max-width: 640px;
+    
+    .top-menu > div {
+        width: 0%;
     }
-}
-@media (max-width: 640px) {
-    .container {
-        max-width: 475px;
-    }
-}
-@media (max-width: 475px) {
-    .container {
-        width: 100%;
-    }
-    header {
-        width: 100%;
-    }
-    .top-menu, .bottom-menu {
-        display: none;
-    }
-    .middle-menu {
-        .topbar-abenson-logo {
-            width: 5.75rem;
-            height: auto;
-        }
-        input {
-            width: 30rem;
-        }
-        .login-btn {
-            display: none;
-        }
-        button {
-            padding: 0;
-        }
-        .topbar-search-icon{
-            display: none;
-        }
-    }
-    button {
-        font-size: 14px;
+    .bottom-menu > button {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+        font-size: 10px;
     }
     .hero-banner {
-        min-width: 10.5rem;
-        padding-top: 19rem;
-        padding-inline: 0.5rem;
-
-        h1 {
-            font-size: 30px;
-        }
+        min-width: 45rem;
     }
     .about-cards {
         flex-direction: column;
+        align-items: center;
+    }
+    .join-cards {
+        flex-direction: column;
+    }
+    .job-list {
+        h5 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 640px) {
+    
+    .top-menu {
+        label {
+            font-size: 10px;
+        }
+        button {
+            font-size: 10px;
+        }
+    }
+    .bottom-menu > button {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        font-size: 10px;
+    }
+    .hero-banner {
+        min-width: 30rem;
+        padding-inline: 5px;
+    }
+    .job-list {
+        h5 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    .footer-middle {
+        column-gap: 3rem;
+
+        p {
+            line-height: 1rem;
+        }
+    }
+}
+@media (max-width: 476px) {
+    
+    .top-menu {
+        label {
+            font-size: 6px;
+        }
+        button {
+            font-size: 6px;
+        }
+    }
+    .middle-menu {
+        .topbar-abenson-logo {
+            width: 9.75rem;
+            height: 0.438rem;
+        }
+
+        button {
+            padding: 0;
+        }
+    }
+    .middle-menu-buttons {
+        gap: 10px;
+    }
+    .bottom-menu > button {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        font-size: 6px;
+        padding-inline: 0.2rem;
+    }
+    .hero-banner {
+        min-width: 20rem;
+        padding-top: 230px;
+    }
+    .socials p {
+        font-size: 12px;
+    }
+    .footer-left input {
+        width: 250px;
+        padding-right: 0;
+    }
+    .footer-middle {
+        column-gap: 1rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 }
 
